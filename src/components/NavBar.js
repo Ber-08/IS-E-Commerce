@@ -8,6 +8,7 @@ import Body from './Body';
 import { FaShoppingBag } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { onClickCart } from '../campaign';
 
 const NavBar = () => {
     const [show, setShow] = useState(false);
@@ -106,9 +107,9 @@ const NavBar = () => {
 
                     </ul>
 
-                    <Link to="/cart">
+                    <a href="/cart" onClick={onClickCart}>
                         <FaShoppingBag className=' text-2xl text-right ml-10 relative left-24' />
-                    </Link>
+                    </a>
                 </nav >
             </header >
 

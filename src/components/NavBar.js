@@ -107,9 +107,9 @@ const NavBar = () => {
 
                     </ul>
 
-                    <Link to="/cart" onClick={onClickCart}>
+                    <a href="/cart" onClick={onClickCart}>
                             <FaShoppingBag className=' text-2xl text-right ml-10 relative left-24' />
-                    </Link>
+                    </a>
                 </nav >
             </header >
 

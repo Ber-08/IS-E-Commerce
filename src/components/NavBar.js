@@ -56,7 +56,7 @@ const NavBar = () => {
     <div>
       <header class="banner" role="banner">
         <nav class="navbar" role="navigation" aria-label="menu">
-          <Link to="/" onClick={onClickHome}>
+          <Link to="/home" onClick={onClickHome}>
             <img src={logo} alt="" className=" ml-32" />
           </Link>
 

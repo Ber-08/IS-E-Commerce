@@ -1,3 +1,11 @@
+export const onClickHome = () => {
+  if (window.SalesforceInteractions) {
+    window.SalesforceInteractions.sendEvent({
+      interaction: { name: "Home Page" },
+    });
+  }
+};
+
 export const onClickCart = () => {
   if (window.SalesforceInteractions) {
     window.SalesforceInteractions.sendEvent({
@@ -6,13 +14,6 @@ export const onClickCart = () => {
   }
 };
 
-export const onClickHome = () => {
-  if (window.SalesforceInteractions) {
-    window.SalesforceInteractions.sendEvent({
-      interaction: { name: "Home Page" },
-    });
-  }
-};
 export const onClickJournal = () => {
   if (window.SalesforceInteractions) {
     window.SalesforceInteractions.sendEvent({

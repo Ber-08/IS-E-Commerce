@@ -33,13 +33,14 @@ export const onClickGPayInitiated = () => {
 export const onClickGpay = (cartItems) => {
   if (window.SalesforceInteractions && window.SalesforceInteractions.mcis) {
     cartItems.forEach((item) => {
-      const lineItem = window.SalesforceInteractions.mcis.buildLineItem({
-        sku: item.sku,
-        name: item.name,
-        price: item.price,
-        currency: item.currency || "USD",
-        quantity: item.quantity || 1,
-      });
+      const lineItem =
+        window.SalesforceInteractions.mcis.buildLineItemFromPageState({
+          sku: item.sku,
+          name: item.name,
+          price: item.price,
+          currency: item.currency || "USD",
+          quantity: item.quantity || 1,
+        });
 
       window.SalesforceInteractions.sendEvent({
         interaction: {

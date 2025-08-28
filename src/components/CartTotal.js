@@ -95,6 +95,7 @@ const CartTotal = (props) => {
           onLoadPaymentData={(paymentData) => {
             console.log(paymentData.paymentMethodData);
             onClickGpay(cartItems);
+            console.log(cartItems);
           }}
         />
       </div>

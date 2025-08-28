@@ -22,13 +22,13 @@ export const onClickJournal = () => {
   }
 };
 
-export const onClickGPayInitiated = () => {
-  if (window.SalesforceInteractions) {
-    window.SalesforceInteractions.sendEvent({
-      interaction: { name: "GPayInitiated" },
-    });
-  }
-};
+// export const onClickGPayInitiated = () => {
+//   if (window.SalesforceInteractions) {
+//     window.SalesforceInteractions.sendEvent({
+//       interaction: { name: "GPayInitiated" },
+//     });
+//   }
+// };
 
 export const onClickGpay = (cartItems) => {
   if (window.SalesforceInteractions && window.SalesforceInteractions.mcis) {

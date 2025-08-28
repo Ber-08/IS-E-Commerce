@@ -7,7 +7,8 @@ import CartAdditonalFeatures from "./CartAdditonalFeatures";
 import CartPageFaq from "./CartPageFaq";
 import Features2 from "./Features2";
 import { useSelector } from "react-redux";
-import { onclickGpay, onClickGPayInitiated } from "../campaign";
+import { onclickGpay } from "../campaign.js";
+import { onClickGPayInitiated } from "../campaign.js";
 
 const CartTotal = (props) => {
   let finapPr = props.totalPr + 20 + 15;

@@ -21,3 +21,32 @@ export const onClickJournal = () => {
     });
   }
 };
+
+export const onClickGPayInitiated = () => {
+  if (window.SalesforceInteractions) {
+    window.SalesforceInteractions.sendEvent({
+      interaction: { name: "GPayInitiated" },
+    });
+  }
+};
+
+export const onClickGpay = (cartItems) => {
+  if (window.SalesforceInteractions && window.SalesforceInteractions.mcis) {
+    cartItems.forEach((item) => {
+      const lineItem = window.SalesforceInteractions.mcis.buildLineItem({
+        sku: item.sku,
+        name: item.name,
+        price: item.price,
+        currency: item.currency || "USD",
+        quantity: item.quantity || 1,
+      });
+
+      window.SalesforceInteractions.sendEvent({
+        interaction: {
+          name: "GPayPayment",
+          lineItem,
+        },
+      });
+    });
+  }
+};

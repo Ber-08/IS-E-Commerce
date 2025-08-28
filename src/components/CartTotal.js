@@ -7,7 +7,7 @@ import CartAdditonalFeatures from "./CartAdditonalFeatures";
 import CartPageFaq from "./CartPageFaq";
 import Features2 from "./Features2";
 import { useSelector } from "react-redux";
-import { onclickGpay } from "../campaign.js";
+import { onClickGpay } from "../campaign.js";
 import { onClickGPayInitiated } from "../campaign.js";
 
 const CartTotal = (props) => {
@@ -94,7 +94,7 @@ const CartTotal = (props) => {
           }}
           onLoadPaymentData={(paymentData) => {
             console.log(paymentData.paymentMethodData);
-            onclickGpay(cartItems);
+            onClickGpay(cartItems);
           }}
         />
       </div>

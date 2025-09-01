@@ -29,19 +29,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-          //  path='/'
-          //  element={
-          //    <>
-          //     {' '}
-          //      <NavBar /> <MobileNav /> <SimpleSlider /> <HeroSection /> <BsText /> {<Products />}{' '}
-          //</>     {/*<OurBestSellers />*/} <Ingridients /> <JournalSection /> <FollowONIG /> <SPFooter />{' '}
-          //   </>
-          //  }
-          />
-
-          <Route
-            path="/home"
-            exact
+            path="/"
             element={
               <>
                 {" "}

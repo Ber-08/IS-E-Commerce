@@ -8,7 +8,7 @@ import Body from "./Body";
 import { FaShoppingBag } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { onClickBestSeller, onClickCart } from "../campaign";
+import { onClickCart, onClickCategory } from "../campaign";
 import { onClickHome } from "../campaign";
 
 const NavBar = () => {
@@ -71,7 +71,7 @@ const NavBar = () => {
                   <ul
                     class="dropdown-nav"
                     onMouseLeave={dontShowHandler}
-                    onClick={onClickBestSeller}
+                    onClick={onClickCategory}
                   >
                     <BestSellers> </BestSellers>
                   </ul>

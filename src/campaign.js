@@ -52,10 +52,18 @@ export const onClickGpay = (cartItems) => {
   }
 };
 
-export const onClickBestSeller = () => {
+export const onClickCategory = () => {
   if (window.SalesforceInteractions) {
     window.SalesforceInteractions.sendEvent({
       interaction: { name: "Category-BestSeller" },
+    });
+  }
+};
+
+export const onClickBestSeller = (item) => {
+  if (window.SalesforceInteractions) {
+    window.SalesforceInteractions.sendEvent({
+      interaction: { name: `Best-Seller: ${item.id}` },
     });
   }
 };

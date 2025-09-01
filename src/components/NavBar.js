@@ -68,12 +68,8 @@ const NavBar = () => {
               BEST SELLERS
               {show && (
                 <div>
-                  <ul
-                    class="dropdown-nav"
-                    onMouseLeave={dontShowHandler}
-                    onClick={onClickCategory}
-                  >
-                    <BestSellers> </BestSellers>
+                  <ul class="dropdown-nav" onMouseLeave={dontShowHandler}>
+                    <BestSellers onClick={onClickCategory}> </BestSellers>
                   </ul>
                 </div>
               )}

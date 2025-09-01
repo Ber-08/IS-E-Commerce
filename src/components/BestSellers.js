@@ -11,19 +11,28 @@ const BestSellers = () => {
       {store.map((item) => {
         if (item.type == "bestSeller")
           return (
-            <Link
-              to={`/${item.id}`}
-              key={item.id}
-              onClick={onClickBestSeller(item.id)}
-            >
+            <Link to={`/${item.id}`} key={item.id}>
               <div key={item.id} className="bestSellerIndivitualItem">
                 <HoverImage
                   src={item.primaryImage}
                   hoverSrc={item.hoverImg}
                   className="bestSellerImage rounded-xl mb-6"
+                  onClick={() => onClickBestSeller(item)}
                 />
-                <p className="bestSellerName text-center mb-2"> {item.name} </p>
-                <p className=" font-normal text-center"> ${item.price} </p>
+                <p
+                  className="bestSellerName text-center mb-2"
+                  onClick={onClickBestSeller}
+                >
+                  {" "}
+                  {item.name}{" "}
+                </p>
+                <p
+                  className=" font-normal text-center"
+                  onClick={onClickBestSeller}
+                >
+                  {" "}
+                  ${item.price}{" "}
+                </p>
               </div>
             </Link>
           );

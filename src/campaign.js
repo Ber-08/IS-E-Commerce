@@ -51,3 +51,11 @@ export const onClickGpay = (cartItems) => {
     });
   }
 };
+
+export const onClickBestSeller = () => {
+  if (window.SalesforceInteractions) {
+    window.SalesforceInteractions.sendEvent({
+      interaction: { name: "Cart Page" },
+    });
+  }
+};

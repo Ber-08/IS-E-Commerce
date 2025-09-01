@@ -1,7 +1,7 @@
 export const onClickHome = () => {
   if (window.SalesforceInteractions) {
     window.SalesforceInteractions.sendEvent({
-      interaction: { name: "Home Page" },
+      interaction: { name: "Home" },
     });
   }
 };
@@ -9,7 +9,7 @@ export const onClickHome = () => {
 export const onClickCart = () => {
   if (window.SalesforceInteractions) {
     window.SalesforceInteractions.sendEvent({
-      interaction: { name: "Cart Page" },
+      interaction: { name: "Cart" },
     });
   }
 };
@@ -17,7 +17,7 @@ export const onClickCart = () => {
 export const onClickJournal = () => {
   if (window.SalesforceInteractions) {
     window.SalesforceInteractions.sendEvent({
-      interaction: { name: "Journal Page" },
+      interaction: { name: "Journal" },
     });
   }
 };
@@ -55,7 +55,7 @@ export const onClickGpay = (cartItems) => {
 export const onClickBestSeller = () => {
   if (window.SalesforceInteractions) {
     window.SalesforceInteractions.sendEvent({
-      interaction: { name: "Cart Page" },
+      interaction: { name: "Category" },
     });
   }
 };

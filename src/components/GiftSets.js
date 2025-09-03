@@ -31,25 +31,22 @@ const GiftSets = () => {
         {store.map((item) => {
           if (item.type == "gift")
             return (
-              <Link to={`/${item.id}`} key={item.id}>
+              <Link
+                to={`/${item.id}`}
+                key={item.id}
+                onClick={onClickGiftSets(item)}
+              >
                 <div key={item.id} className="giftIndivitual">
                   <HoverImage
                     src={item.primaryImage}
                     hoverSrc={item.hoverImg}
                     className="GiftImage w-48 rounded-lg mb-6"
-                    onClick={onClickGiftSets(item)}
                   />
-                  <p
-                    className="giftName text-center text-md mb-2"
-                    onClick={onClickGiftSets(item)}
-                  >
+                  <p className="giftName text-center text-md mb-2">
                     {" "}
                     {item.name}{" "}
                   </p>
-                  <p
-                    className="giftPrice font-normal text-center"
-                    onClick={onClickGiftSets(item)}
-                  >
+                  <p className="giftPrice font-normal text-center">
                     ${item.price}{" "}
                   </p>
                 </div>

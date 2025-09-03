@@ -34,7 +34,7 @@ const GiftSets = () => {
               <Link
                 to={`/${item.id}`}
                 key={item.id}
-                onClick={onClickGiftSets(item)}
+                onClick={() => onClickGiftSets(item)}
               >
                 <div key={item.id} className="giftIndivitual">
                   <HoverImage

@@ -37,18 +37,18 @@ const GiftSets = () => {
                     src={item.primaryImage}
                     hoverSrc={item.hoverImg}
                     className="GiftImage w-48 rounded-lg mb-6"
-                    onClick={onClickGiftSets}
+                    onClick={onClickGiftSets(item)}
                   />
                   <p
                     className="giftName text-center text-md mb-2"
-                    onClick={onClickGiftSets}
+                    onClick={onClickGiftSets(item)}
                   >
                     {" "}
                     {item.name}{" "}
                   </p>
                   <p
                     className="giftPrice font-normal text-center"
-                    onClick={onClickGiftSets}
+                    onClick={onClickGiftSets(item)}
                   >
                     ${item.price}{" "}
                   </p>

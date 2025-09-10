@@ -101,16 +101,6 @@ export const onClickAddToCart = (item) => {
         name: window.SalesforceInteractions.CartInteractionName.AddToCart,
         lineItem: lineItem,
       },
-
-      catalogObject: {
-        type: "Product",
-        id: item.id,
-        attributes: {
-          title: item.title,
-          price: item.price,
-          image: item.image,
-        },
-      },
     });
   }
 };

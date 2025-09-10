@@ -67,3 +67,20 @@ export const onClickGiftSets = (item) => {
     });
   }
 };
+
+export const onClickOurBestSeller = (item) => {
+  if (window.SalesforceInteractions) {
+    window.SalesforceInteractions.sendEvent({
+      interaction: { name: `Our-Best-Seller: ${item.id}` },
+      catalogObject: {
+        type: "Product",
+        id: item.id,
+        attributes: {
+          title: item.title,
+          price: item.price,
+          image: item.image,
+        },
+      },
+    });
+  }
+};

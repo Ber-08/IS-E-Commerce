@@ -89,7 +89,7 @@ export const onClickAddToCart = (item) => {
   if (window.SalesforceInteractions) {
     window.SalesforceInteractions.sendEvent({
       interaction: {
-        name: window.SalesforceInteractions.CartInteractionName.AddToCart,
+        name: "Add-To-Cart",
       },
     });
   }

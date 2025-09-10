@@ -3,7 +3,7 @@ import { store } from "../productsStore/Store";
 import "../styles/OurBestSellers.css";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../redux-state/CartState";
-import { onClickOurBestSeller } from "../campaign";
+import { onClickAddToCart, onClickOurBestSeller } from "../campaign";
 
 import { Link } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
@@ -56,7 +56,10 @@ const OurBestSellers = (props) => {
             >
               <button
                 className="btn btn-primary"
-                onClick={addItemToCartHandler}
+                onClick={() => {
+                  addItemToCartHandler();
+                  onClickAddToCart({ id, title, price, image });
+                }}
               >
                 Buy Now
               </button>

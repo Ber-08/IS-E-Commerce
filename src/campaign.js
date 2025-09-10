@@ -84,3 +84,28 @@ export const onClickOurBestSeller = (item) => {
     });
   }
 };
+
+export const onClickAddToCart = (item) => {
+  if (window.SalesforceInteractions) {
+    const lineItem =
+      window.SalesforceInteractions.mcis.buildLineItemFromPageState({
+        sku: item.sku,
+        name: item.name,
+        price: item.price,
+        currency: item.currency || "USD",
+        quantity: item.quantity || 1,
+      });
+    window.SalesforceInteractions.sendEvent({
+      interaction: { name: `Add-To-Cart: ${item.id}`, lineItem },
+      catalogObject: {
+        type: "Product",
+        id: item.id,
+        attributes: {
+          title: item.title,
+          price: item.price,
+          image: item.image,
+        },
+      },
+    });
+  }
+};

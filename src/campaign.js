@@ -97,8 +97,10 @@ export const onClickAddToCart = (item) => {
       });
 
     window.SalesforceInteractions.sendEvent({
-      interaction: { name: "Add-To-Cart" },
-      lineItem,
+      interaction: {
+        name: window.SalesforceInteractions.CartInteractionName.AddToCart,
+        lineItem: lineItem,
+      },
       catalogObject: {
         type: "Product",
         id: item.id,

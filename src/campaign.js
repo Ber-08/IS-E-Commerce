@@ -102,6 +102,7 @@ export const onClickAddToCart = (item) => {
         lineItem: lineItem,
       },
 
+      //optional
       catalogObject: {
         type: "Product",
         id: item.id,

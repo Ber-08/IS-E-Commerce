@@ -89,14 +89,16 @@ export const onClickAddToCart = (item) => {
   if (window.SalesforceInteractions) {
     const lineItem =
       window.SalesforceInteractions.mcis.buildLineItemFromPageState({
-        sku: item.sku,
-        name: item.name,
+        sku: item.sku || item.id,
+        name: item.title,
         price: item.price,
         currency: item.currency || "USD",
         quantity: item.quantity || 1,
       });
+
     window.SalesforceInteractions.sendEvent({
-      interaction: { name: `Add-To-Cart: ${item.id}`, lineItem },
+      interaction: { name: "Add-To-Cart" },
+      lineItem,
       catalogObject: {
         type: "Product",
         id: item.id,

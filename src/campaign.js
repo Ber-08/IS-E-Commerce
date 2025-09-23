@@ -4,7 +4,7 @@ export const onClickHome = () => {
       interaction: { name: "Home" },
       user: {
         attributes: {
-          profileId: "ABC000A1",
+          // profileId: "ABC000A1",
           Subscriber_ID: "ABC000A1",
           // mobileNumber: "918976836521",
           emailAddress: "abc@email.com",

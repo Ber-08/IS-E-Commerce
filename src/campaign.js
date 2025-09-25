@@ -2,15 +2,6 @@ export const onClickHome = () => {
   if (window.SalesforceInteractions) {
     window.SalesforceInteractions.sendEvent({
       interaction: { name: "Home" },
-      user: {
-        attributes: {
-          profileId: "ABC000A1",
-          Subscriber_ID: "ABC000A1",
-          mobileNumber: "918976836521",
-          emailAddress: "abc@email.com",
-          userName: "John Doe",
-        },
-      },
     });
   }
 };

@@ -1,4 +1,6 @@
 export const onClickHome = () => {
+  console.log("Home Clicked");
+
   if (window.SalesforceInteractions) {
     window.SalesforceInteractions.sendEvent({
       interaction: { name: "Home" },

@@ -5,6 +5,7 @@ export const onClickHome = () => {
     window.SalesforceInteractions.sendEvent({
       interaction: { name: "Home" },
     });
+    console.log("Home Interaction Sent");
   }
 };
 

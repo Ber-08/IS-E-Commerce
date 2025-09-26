@@ -1,12 +1,5 @@
 export const onClickHome = () => {
-  // console.log("Home Clicked");
-
-  if (window.SalesforceInteractions) {
-    window.SalesforceInteractions.sendEvent({
-      user: { id: "test_user_1" },
-      interaction: { name: "Home" },
-    });
-  }
+  console.log("Home Clicked");
 };
 
 export const onClickCart = () => {

@@ -4,12 +4,12 @@ export const onClickHome = () => {
   if (window.SalesforceInteractions) {
     window.SalesforceInteractions.sendEvent({
       interaction: { name: "Home" },
-      user: {
-        id: "test-user",
-        email: "testUser@hotmail.com",
-        firstName: "Test",
-        lastName: "User",
-      },
+      // user: {
+      //   id: "test-user",
+      //   email: "testUser@hotmail.com",
+      //   firstName: "Test",
+      //   lastName: "User",
+      // },
     });
     console.log("Home Interaction Sent");
   }
